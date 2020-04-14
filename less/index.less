@@ -56,3 +56,157 @@ table {
 html, body {
     height: 100%;
 }
+/*------------------------code starts here-----------------------*/
+
+
+/*------------varibles/mixins-----------*/
+@color1: #69CCEB;
+@color2: #65E791;
+@color3: #F9BEBE;
+@text1: 1.6rem;
+.flex_space_between{
+	display: flex;
+	justify-content: space-between;
+}
+.flex_center{
+	display: flex;
+	justify-content: center;
+}
+/*------------General-----------*/
+html{
+	font-size: 62.7%;
+	
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+h1{
+	font-size: 3.8rem;
+	font-weight: bold;
+}
+h2{
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+h3{
+	font-size: @text1;
+}
+h4{
+	font-size: @text1;
+	font-weight: bold;
+}
+p,li,a{
+	font-size: @text1;
+}
+
+/*------------body-----------*/
+body{
+
+	header{
+		.flex_space_between();
+		align-items: flex-end;
+		padding: 2vh;
+
+		nav{
+			.flex_space_between();
+			width: 50%;
+			min-width: 300px ;
+
+		}
+	}
+
+	.main_container{
+		.flex_center();
+		align-items: flex-start;
+		margin: 2.5%;
+		@media (max-width: 500px) {
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.skills_section h2, .work_history h2, .contact_section h2{
+			margin-right: 4%;
+			width: 150px;
+		}
+
+		.skills_section , .work_history , .contact_section{
+			margin-top: 10%;
+			@media(min-width: 800px){
+				margin-top: 5%;
+			}
+		}
+
+		img{
+			width: 25%;
+			margin-right: 3.5%;
+			max-width: 300px;
+			@media (max-width: 500px){
+				align-self: center;
+				width: 45%;
+				margin-bottom: 10%;
+			}
+
+		}
+
+		.skills_section{
+			display: flex;
+			h2{
+				color: @color1;
+			}
+			.skills_list{
+				display: flex;
+				margin-right: 10%;
+				h3{
+					color: @color1;
+					writing-mode: vertical-lr;
+					transform: rotate(180deg);
+					text-align: center;
+					border-left: 2px solid @color1;
+					margin-right: 15px;
+				}
+				
+			}
+		}
+
+		.work_history{
+			display: flex;
+			h2, h3{
+				color: @color2;
+			}
+			.work_history_info{
+				width: 60%;
+				.one{
+					margin-bottom: 20px;
+				}
+			}
+			}
+		}
+
+		.contact_section{
+			display: flex;
+			align-items: baseline;
+			h2{
+				color: @color3;
+			}
+			.contact_info{
+				display: flex;
+				flex-direction: column;
+
+
+		}
+
+		
+	}
+
+	footer{
+		.flex_center();
+		background-color: black;
+		padding: 2vh;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+
+	}
+
+}

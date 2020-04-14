@@ -134,4 +134,147 @@ html,
 body {
   height: 100%;
 }
-/*----------------Start of code------------------*/
+/*------------------------code starts here-----------------------*/
+/*------------varibles/mixins-----------*/
+.flex_space_between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
+/*------------General-----------*/
+html {
+  font-size: 62.7%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1 {
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+p,
+li,
+a {
+  font-size: 1.6rem;
+}
+/*------------body-----------*/
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2vh;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  min-width: 300px ;
+}
+body .main_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2.5%;
+}
+@media (max-width: 500px) {
+  body .main_container {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+body .main_container .skills_section h2,
+body .main_container .work_history h2,
+body .main_container .contact_section h2 {
+  margin-right: 4%;
+  width: 150px;
+}
+body .main_container .skills_section,
+body .main_container .work_history,
+body .main_container .contact_section {
+  margin-top: 10%;
+}
+@media (min-width: 800px) {
+  body .main_container .skills_section,
+  body .main_container .work_history,
+  body .main_container .contact_section {
+    margin-top: 5%;
+  }
+}
+body .main_container img {
+  width: 25%;
+  margin-right: 3.5%;
+  max-width: 300px;
+}
+@media (max-width: 500px) {
+  body .main_container img {
+    align-self: center;
+    width: 45%;
+    margin-bottom: 10%;
+  }
+}
+body .main_container .skills_section {
+  display: flex;
+}
+body .main_container .skills_section h2 {
+  color: #69CCEB;
+}
+body .main_container .skills_section .skills_list {
+  display: flex;
+  margin-right: 10%;
+}
+body .main_container .skills_section .skills_list h3 {
+  color: #69CCEB;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  border-left: 2px solid #69CCEB;
+  margin-right: 15px;
+}
+body .main_container .work_history {
+  display: flex;
+}
+body .main_container .work_history h2,
+body .main_container .work_history h3 {
+  color: #65E791;
+}
+body .main_container .work_history .work_history_info {
+  width: 60%;
+}
+body .main_container .work_history .work_history_info .one {
+  margin-bottom: 20px;
+}
+body .contact_section {
+  display: flex;
+  align-items: baseline;
+}
+body .contact_section h2 {
+  color: #F9BEBE;
+}
+body .contact_section .contact_info {
+  display: flex;
+  flex-direction: column;
+}
+body footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 2vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
